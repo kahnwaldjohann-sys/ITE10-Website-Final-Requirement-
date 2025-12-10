@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NJPG Productions</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body class="dashboard-body">
+
+    <nav>
+        <div class="logo">NJPG Productions</div>
+        <ul class="nav-links">
+            <li><button onclick="showSection('home')" class="nav-btn active">Home</button></li>
+            <li><button onclick="showSection('about')" class="nav-btn">About Me</button></li>
+            <li><button onclick="showSection('projects')" class="nav-btn">Projects</button></li>
+            <li><button onclick="showSection('contact')" class="nav-btn">Contact</button></li>
+            <li><button onclick="logout()" class="logout-btn">Log Out</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="section active">
+            <div class="hero">
+                <h1>Hello, I'm <span style="color:var(--primary)">Niño</span></h1>
+                <p>Future Game Developer and Involuntary Future Web Developer</p>
+                <br>
+                <button onclick="showSection('projects')" style="width: 350px; margin: 0 auto;">View My Upcoming Projects</button>
+            </div>
+        </div>
+
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 20px; line-height: 1.6;">
+                <img src="/weeb/about-me-photo.jpg" alt="My profile photo" class="profile-pic">
+                <p>I am a college undergraduate who loves games, and music. Music is my first love, from the 60s to the present, then a few exposure to computers and a programming course where C++ is the language being taught during my EE years piqued my interest to programming. Although web development is not my forte, I still find it to be essential in the future.</p>
+                <div>
+                    <h3>My Skills</h3>
+                    <p style="color: var(--primary-dark);">C • C++ • Python • Java • HTML • CSS • JavaScript • Part-time musician</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>My Upcoming Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="/weeb/project-images/millionaire.jpg" alt="A photo of cluttered money with guns scattered around" class="project-image">
+                    <div class="project-info">
+                        <h3>Still Want to be a Millionaire?</h3>
+                        <p>A text-based crime thriller drama game where you are a contestant of a game show while a hostage and robbery occurs during the segment.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/weeb/project-images/llm.jpg" alt="A robot hand pointing on a wall where nodes can also be seen" class="project-image">
+                    <div class="project-info">
+                        <h3>Summa.ai</h3>
+                        <p>A document-reading LLM (large language model) that can summarize your instructor's given learning materials, where it can also make questionnaires from it, make a detailed study about it, and many more!</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/weeb/project-images/zero.jpg" alt="Image of woman in headphones while using laptop" class="project-image">
+                    <div class="project-info">
+                        <h3>Zero!</h3>
+                        <p>An AI music platform where you can upload music to do stem separation, tablature, audio track removal, and other numerous musical possibilities! Inspired by Moises.ai.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <div class="contact-card">
+                <h2>Get in Touch</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: #666;">
+                    I'm currently available for freelance work or full-time opportunities.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:kahnwaldjohann@gmail.com">kahnwaldjohann@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+63 958 914 7888</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Cabadbaran City, Philippines</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-text">
+                            <h3>Socials</h3>
+                            <p>
+                                <a href="https://www.facebook.com/profile.php?id=61580926683582">Facebook</a> • <a href="https://github.com/kahnwaldjohann-sys">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+    <script>
+        // Initialize Homepage Logic (Check auth)
+        document.addEventListener("DOMContentLoaded", () => {
+            initDashboard();
+        });
+    </script>
+</body>
+</html>

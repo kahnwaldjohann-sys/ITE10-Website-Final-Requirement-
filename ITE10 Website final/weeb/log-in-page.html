@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body class="login-body">
+    <div class="wrapper">
+        <div id="logout-message" class="success-banner">
+            ✅ You have been logged out successfully.
+        </div>
+
+        <div class="login-header">
+            <h1>Welcome</h1>
+            <p>Please enter your details to sign in.</p>
+        </div>
+        
+        <form id="form" novalidate>
+            <div class="input-group">
+                <input type="text" id="username-input" placeholder=" " autocomplete="off">
+                <label for="username-input">Username</label>
+                <div class="icon">👤</div>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder=" " autocomplete="off">
+                <label for="password-input">Password</label>
+                <div class="icon">🔒</div>
+            </div>
+
+            <button type="submit" id="submit-btn">Log In</button>
+        </form>
+
+        <div id="error-message" class="error-msg"></div>
+    </div>
+
+    <script src="logic.js"></script>
+    <script>
+        // Init Login Page Logic
+        document.addEventListener("DOMContentLoaded", () => {
+            initLogin();
+        });
+    </script>
+</body>
+</html>
